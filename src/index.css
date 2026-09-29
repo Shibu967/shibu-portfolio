@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------
+   Base reset and global defaults
+   ------------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #020617; /* surface-page / slate-950 */
+  color: #f1f5f9;            /* text-primary / slate-100 */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -------------------------------------------------------
+   Focus styles — accessible keyboard navigation
+   ------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid #8b5cf6; /* accent */
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------
+   Scrollbar styling — subtle dark theme scrollbar
+   ------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* surface-card */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-600 */
+}
+
+/* -------------------------------------------------------
+   Typography helpers
+   ------------------------------------------------------- */
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* -------------------------------------------------------
+   Utility: smooth section transitions
+   ------------------------------------------------------- */
+
+section {
+  position: relative;
+}
+
+/* -------------------------------------------------------
+   Utility: selection color
+   ------------------------------------------------------- */
+
+::selection {
+  background-color: rgba(139, 92, 246, 0.25); /* accent at 25% opacity */
+  color: #f1f5f9;
+}
